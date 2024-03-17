@@ -1,0 +1,9 @@
+{
+    "project_name": "someproject",
+    "arduino": [
+        "nano",
+        "uno",
+        "mega",
+        "esp32"
+    ]
+}
