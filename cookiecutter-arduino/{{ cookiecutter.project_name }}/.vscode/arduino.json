@@ -1,0 +1,8 @@
+{
+    "configuration": "cpu=atmega328",
+    "board": {% if cookiecutter.arduino == "nano"  -%} "arduino:avr:nano"
+    {% elif cookiecutter.arduino == "esp32" -%} "not uno"
+    {% else -%} "help"{%- endif %},
+    "sketch": "blink.ino",
+    "output": ".\\build"
+}
