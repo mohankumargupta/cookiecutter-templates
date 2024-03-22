@@ -1,44 +1,6 @@
-{% if cookiecutter.template == "standard" %}
-[build-system]
-requires = ["setuptools >= 61.0"]
-build-backend = "setuptools.build_meta"
-
-[project]
-name = "{{ cookiecutter.project_name }}"
-version = "0.0.1"
-requires-python = "=={{ cookiecutter.python }}.*"
-dependencies = [
-    "requests"
-]
-
-[tool.poe.tasks]
-run = "python main.py"
+{% if cookiecutter.project_template == "standard" %}
+{% include "pyproject-standard.toml" %}
 {% endif %}
-{% if cookiecutter.template == "nuitka" %}
-[build-system]
-requires = ["setuptools>=42", "wheel", "nuitka", "toml"]
-build-backend = "nuitka.distutils.Build"
-
-[project]
-name = "{{ cookiecutter.project_name }}"
-version = "0.1"
-requires-python = "=={{ cookiecutter.python }}.*"
-dependencies = [
-    "requests",
-    "easygui"
-]
-
-[project.optional-dependencies] 
-nuitka = [
-    "nuitka"
-]
-
-[tool.poe.tasks]
-standalone = "python -m nuitka --follow-imports --enable-plugin=tk-inter --windows-disable-console --standalone main.py"
-onefile = "python -m nuitka --follow-imports --enable-plugin=tk-inter --windows-disable-console --onefile main.py"
-onefileuncompressed = "python -m nuitka --onefile-no-compression --enable-plugin=tk-inter --windows-disable-console --onefile main.py"
-
-#https://github.com/pypa/sampleproject/blob/main/pyproject.toml
-
-# use upx for compression of executables
+{% if cookiecutter.project_template == "nuitka" %}
+{% include "pyproject-nuitka.toml" %}
 {% endif %}
