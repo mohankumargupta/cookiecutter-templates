@@ -1,6 +1,6 @@
-{% if cookiecutter.project_template == "standard" %}
+{%- if cookiecutter.project_template == "standard" %}
 {% include "pyproject-standard.toml" %}
 {% endif %}
-{% if cookiecutter.project_template == "nuitka" %}
+{%- if cookiecutter.project_template == "nuitka" %}
 {% include "pyproject-nuitka.toml" %}
 {% endif %}
