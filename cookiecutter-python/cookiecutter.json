@@ -1,4 +1,5 @@
 {
     "project_name": "example",
-    "python": "3.11"
+    "python": "3.11",
+    "template": ["standard", "nuitka"]
 }
