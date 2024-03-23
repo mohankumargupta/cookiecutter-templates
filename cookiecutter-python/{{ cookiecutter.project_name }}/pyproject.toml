@@ -3,6 +3,7 @@
 {% endif %}
 {%- if cookiecutter.project_template == "nuitka" %}
 {%- include "pyproject-nuitka.toml" %}
+{% endif %}
 {%- if cookiecutter.project_template == "cli" %}
 {%- include "pyproject-cli.toml" %}
 {% endif %}
