@@ -1,5 +1,5 @@
 {
     "project_name": "example",
     "python": "3.11",
-    "project_template": ["standard", "nuitka"]
+    "project_template": ["standard", "cli", "nuitka"]
 }

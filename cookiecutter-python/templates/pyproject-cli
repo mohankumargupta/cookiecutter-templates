@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "{{ cookiecutter.project_name }}"
+version = "0.0.1"
+requires-python = "==3.12.*"
+dependencies = [
+    "requests"
+]
+
+[project.scripts]
+{{ cookiecutter.project_name }} = "{{ cookiecutter.project_name }}.main:main"
+
+[tool.poe.tasks]
+run = "{{ cookiecutter.project_name }}"

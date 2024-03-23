@@ -1,4 +1,5 @@
-import requests
-
-resp = requests.get("http://example.com")
-print(resp.text)
+{%- if cookiecutter.project_template == "cli" %}
+{%- include "main-cli.py" %}
+{%- else %}
+{%- include "main.py" %}
+{% endif %}
