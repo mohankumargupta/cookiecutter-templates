@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "esphome compile",
+            "command": "esphome",
+            "args": [
+                "compile",
+                "{{ cookiecutter.project_name }}.yaml"
+            ],
+            "type": "shell",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
