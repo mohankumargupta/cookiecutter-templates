@@ -1,6 +1,13 @@
 {
     "project_name": "example",
-    "python": "3.11",
-    "python_requirements": ["compatible", "exact"],
-    "project_template": ["standard", "cli", "nuitka"]
+    "python": "3.9",
+    "python_requirements": [
+        "compatible",
+        "exact"
+    ],
+    "project_template": [
+        "cli",
+        "standard",
+        "nuitka"
+    ]
 }
