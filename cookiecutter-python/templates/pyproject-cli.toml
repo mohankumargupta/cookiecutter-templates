@@ -5,7 +5,11 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "{{ cookiecutter.project_name }}"
 version = "0.0.1"
-requires-python = "==3.12.*"
+{%- if cookiecutter.python_requirements == "exact" -%}
+requires-python = "== {{ cookiecutter.python }}.*"
+{%- else -%}
+requires-python = "~= {{ cookiecutter.python }}"
+{% endif %}
 dependencies = [
     "requests"
 ]
