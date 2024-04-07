@@ -11,7 +11,8 @@ requires-python = "== {{ cookiecutter.python }}.*"
 requires-python = "~= {{ cookiecutter.python }}"
 {% endif %}
 dependencies = [
-    "requests"
+    "requests",
+    "poethepoet"
 ]
 
 [project.scripts]
