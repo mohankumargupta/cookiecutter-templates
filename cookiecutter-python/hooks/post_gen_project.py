@@ -18,3 +18,6 @@ if "{{ cookiecutter.project_template }}" == "esphomedev":
     vscode_dest = esphome_dir.joinpath(".vscode")
     Path("main.py").unlink()
     shutil.move("pyproject.toml", esphome_dir)
+    shutil.move(vscode_launch, vscode_dest)
+    shutil.move(vscode_settings, vscode_dest)
+    vscode.unlink()
