@@ -1,4 +1,4 @@
-{%- if cookiecutter.project_name == "esphomedev" %}
+{%- if cookiecutter.project_template == "esphomedev" %}
 {%- include ".vscode-launch-esphomedev.json" %}
 {%- else %}
 {%- include ".vscode-launch.json" %}
