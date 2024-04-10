@@ -12,5 +12,9 @@ if "{{ cookiecutter.project_template }}" == "cli":
 
 if "{{ cookiecutter.project_template }}" == "esphomedev":
     esphome_dir = Path("esphome-dev")
+    vscode = Path(".vscode")
+    vscode_launch = vscode.joinpath("launch.json")
+    vscode_settings = vscode.joinpath("settings.json")
+    vscode_dest = esphome_dir.joinpath(".vscode")
     Path("main.py").unlink()
     shutil.move("pyproject.toml", esphome_dir)
