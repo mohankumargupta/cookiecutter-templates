@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "esphome"
+version = "0.0.1"
+requires-python = "~= 3.9"
+dependencies = [
+    "requests",
+    "poethepoet"
+]
+
+[tool.setuptools]
+py-modules = ["esphome"]
+
+#[tool.black]
+#target-version = ["py39", "py310"]
+#exclude = 'generated'
+
+[tool.poe.tasks]
+version = "python -m esphome version"
+tests = "pytest tests/component_tests"

@@ -7,3 +7,6 @@
 {%- if cookiecutter.project_template == "cli" %}
 {%- include "pyproject-cli.toml" %}
 {% endif %}
+{%- if cookiecutter.project_template == "esphomedev" %}
+{%- include "pyproject-esphomedev.toml" %}
+{% endif %}

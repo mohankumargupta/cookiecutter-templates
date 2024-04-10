@@ -8,6 +8,7 @@
     "project_template": [
         "cli",
         "standard",
-        "nuitka"
+        "nuitka",
+        "esphomedev"
     ]
 }

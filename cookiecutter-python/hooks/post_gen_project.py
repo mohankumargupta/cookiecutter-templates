@@ -8,3 +8,4 @@ if "{{ cookiecutter.project_template }}" == "cli":
     project.mkdir()
     project.joinpath('__init__.py').touch()
     shutil.move("main.py", project)
+
