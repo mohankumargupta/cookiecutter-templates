@@ -24,6 +24,7 @@ def clone_github_repo():
                 zip_ref.extractall(destination)
 
             print("Repository cloned successfully!")
+            os.remove(temp_file_path)
     except Exception as e:
         print(f"Failed to clone repository: {e}")
 
