@@ -25,6 +25,9 @@ def clone_github_repo():
 
             print("Repository cloned successfully!")
             os.remove(temp_file_path)
+            esphome_dir = Path("esphome-dev")
+            print(list(filter(lambda y:y.is_file(), Path(".").iterdir())))
+            print(esphome_dir.exists())            
     except Exception as e:
         print(f"Failed to clone repository: {e}")
 
