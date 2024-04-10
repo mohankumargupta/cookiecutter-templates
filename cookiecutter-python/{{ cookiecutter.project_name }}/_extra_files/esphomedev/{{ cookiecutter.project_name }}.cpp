@@ -5,15 +5,15 @@ namespace {{ cookiecutter.project_name }} {
 
 static const char *TAG = "empty_component.component";
 
-void EmptyComponent::setup() {
+void {{ cookiecutter.project_name[0]|upper }}{{ cookiecutter.project_name[1:] }})Component::setup() {
 
 }
 
-void EmptyComponent::loop() {
+void EmptyComp{{ cookiecutter.project_name[0]|upper }}{{ cookiecutter.project_name[1:] }})Componentonent::loop() {
 
 }
 
-void EmptyComponent::dump_config(){
+void {{ cookiecutter.project_name[0]|upper }}{{ cookiecutter.project_name[1:] }})Component::dump_config(){
     ESP_LOGCONFIG(TAG, "Empty component");
 }
 

@@ -5,7 +5,7 @@
 namespace esphome {
 namespace {{ cookiecutter.project_name }} {
 
-class EmptyComponent : public Component {
+class {{ cookiecutter.project_name[0]|upper }}{{ cookiecutter.project_name[1:] }})Component : public Component {
  public:
   void setup() override;
   void loop() override;
