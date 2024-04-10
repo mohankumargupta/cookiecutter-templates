@@ -24,7 +24,7 @@ def clone_github_repo():
                 zip_ref.extractall(destination)
 
             print("Repository cloned successfully!")
-            os.remove("temp.zip")
+            Path("temp.zip").unlink()
             esphome_dir = Path("esphome-dev")
             print(list(filter(lambda y:y.is_file(), Path(".").iterdir())))
             print(esphome_dir.exists())            
