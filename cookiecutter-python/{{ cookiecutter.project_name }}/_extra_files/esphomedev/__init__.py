@@ -6,7 +6,7 @@ empty_component_ns = cg.esphome_ns.namespace('{{ cookiecutter.project_name }}')
 {{ cookiecutter.project_name[0]|upper }}{{ cookiecutter.project_name[1:] }}Component = empty_component_ns.class_("{{ cookiecutter.project_name[0]|upper }}{{ cookiecutter.project_name[1:] }}", cg.Component)
 
 CONFIG_SCHEMA = cv.Schema({
-    cv.GenerateID(): cv.declare_id({{ cookiecutter.project_name[0]|upper }}{{ cookiecutter.project_name[1:] }})Component
+    cv.GenerateID(): cv.declare_id({{ cookiecutter.project_name[0]|upper }}{{ cookiecutter.project_name[1:] }}Component)
 }).extend(cv.COMPONENT_SCHEMA)
 
 def to_code(config):
