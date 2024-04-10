@@ -1,12 +1,13 @@
 import urllib.request
 import zipfile
 import os
+from pathlib import Path
 
 def clone_github_repo():
     print("Cloning esphome github repo")
     # Construct the URL to get the repository information
     url = f"https://github.com/esphome/esphome/archive/dev.zip"
-
+    destination = Path(".")
     try:
         # Download the repository content as a zip file
         with urllib.request.urlopen(url) as response:
@@ -20,7 +21,7 @@ def clone_github_repo():
 
             # Extract the zip file
             with zipfile.ZipFile(temp_file_path, 'r') as zip_ref:
-                zip_ref.extractall(Path("."))
+                zip_ref.extractall(destination)
 
             print("Repository cloned successfully!")
     except Exception as e:
