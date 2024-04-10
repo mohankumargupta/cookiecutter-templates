@@ -26,9 +26,9 @@ def clone_github_repo():
             print("Repository cloned successfully!")
             Path("temp.zip").unlink()
             esphome_dir = Path("esphome-dev")
-            if esphome_dir.exists():
-                esphome_dir.joinpath("setup.cfg").unlink()
-                esphome_dir.joinpath("setup.py").unlink()
+
+            esphome_dir.joinpath("setup.cfg").unlink()
+            esphome_dir.joinpath("setup.py").unlink()
     except Exception as e:
         print(f"Failed to clone repository: {e}")
 
