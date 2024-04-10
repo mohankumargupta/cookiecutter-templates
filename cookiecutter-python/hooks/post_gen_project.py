@@ -25,7 +25,7 @@ if "{{ cookiecutter.project_template }}" == "esphomedev":
     component_dir = esphome_dir / "esphome" / "components" / "{{ cookiecutter.project_name }}"
     #print("about to mkdir")
     #component_dir.mkdir()
-    print("about to copy")
+    #print("about to copy")
     shutil.copytree(src=Path("_extra_files").joinpath("esphomedev"), dst=component_dir)
 
 shutil.rmtree("_extra_files")
