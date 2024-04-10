@@ -12,7 +12,7 @@ if "{{ cookiecutter.project_template }}" == "cli":
 
 if "{{ cookiecutter.project_template }}" == "esphomedev":
     esphome_dir = Path("esphome-dev")
-    print(list(filter(lambda y:y.is_file(), x.iterdir())))
+    print(list(filter(lambda y:y.is_file(), Path(".").iterdir())))
     print(esphome_dir.exists())
     esphome_dir.joinpath("main.py").unlink()
     shutil.move("pyproject.toml", esphome_dir)
