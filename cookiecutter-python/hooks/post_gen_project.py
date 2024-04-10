@@ -9,3 +9,7 @@ if "{{ cookiecutter.project_template }}" == "cli":
     project.joinpath('__init__.py').touch()
     shutil.move("main.py", project)
 
+if "{{ cookiecutter.project_template }}" == "cli":
+    dest = Path("..")
+    shutil.move("pyproject.toml", dest)
+    shutil
