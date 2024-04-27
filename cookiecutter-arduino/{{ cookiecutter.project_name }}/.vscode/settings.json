@@ -1,5 +1,7 @@
 {
     "arduino.useArduinoCli": true,
     "arduino.clearOutputOnBuild": true,
-    "arduino.logLevel": "verbose"
+    "arduino.logLevel": "verbose",
+    "arduino.analyzeOnOpen": true,
+    "arduino.analyzeOnSettingChange": true
 }

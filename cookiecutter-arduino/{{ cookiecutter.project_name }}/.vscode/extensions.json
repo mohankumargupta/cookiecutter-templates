@@ -1,0 +1,11 @@
+{
+    "recommendations": [
+        "vsciot-vscode.vscode-arduino",
+        "discretegames.f5anything"
+    ],
+    "unwantedRecommendations": [
+        "ms-vscode.cpptools-extension-pack",
+        "ms-vscode-remote.remote-wsl",
+        "ms-azuretools.vscode-docker"
+    ]
+}
