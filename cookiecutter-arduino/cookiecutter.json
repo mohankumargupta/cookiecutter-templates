@@ -2,8 +2,7 @@
     "project_name": "someproject",
     "arduino": [
         "nano",
-        "uno",
-        "mega",
-        "esp32"
+        "esp32",
+        "esp32s2"
     ]
 }
