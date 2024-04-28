@@ -2,7 +2,7 @@
 {%- include "esp32s2/sketch.ino" %}
 {%- elif cookiecutter.arduino == "esp32" %}
 {%- include "esp32/sketch.ino" %}
-{%- if cookiecutter.arduino == "esp32c3" %}
+{%- elif cookiecutter.arduino == "esp32c3" %}
 {%- include "esp32c3/sketch.ino" %}
 {%- elif cookiecutter.arduino == "esp32s3" %}
 {%- include "esp32s3/sketch.ino" %}
