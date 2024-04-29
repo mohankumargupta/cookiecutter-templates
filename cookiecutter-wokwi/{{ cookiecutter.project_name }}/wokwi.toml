@@ -1,0 +1,2 @@
+{% set wokwi = cookiecutter.project_name + "/wokwi.toml" %}
+{% include wokwi %}
