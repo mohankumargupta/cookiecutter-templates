@@ -1,0 +1,2 @@
+{% set diagram = cookiecutter.project_name + "/diagram.json" %}
+{% include diagram %}

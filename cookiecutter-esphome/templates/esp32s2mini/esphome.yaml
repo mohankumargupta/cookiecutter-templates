@@ -10,15 +10,5 @@ debug:
   update_interval: 5s
 logger:
   level: debug
-i2c:
-  sda: 21
-  scl: 22
 
-display:
-  - platform: lcd_pcf8574
-    dimensions: 20x4
-    address: 0x27
-    update_interval: 120s
-    lambda: |-
-      it.print("Hello World!");
 
