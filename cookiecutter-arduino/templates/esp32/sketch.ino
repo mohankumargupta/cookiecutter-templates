@@ -5,7 +5,8 @@ void setup() {
   while (!Serial) delay(100);
 
   Serial.begin(115200);
-  Serial.println("Hello, esp32 dev kit doit nodemcu!");
+  Serial.println("Hello, esp32s devkit doit nodemcu!");
+  // https://www.buildlog.net/blog/wp-content/uploads/2018/04/nodemcu_32s_pinout.png
 }
 
 void loop() {
