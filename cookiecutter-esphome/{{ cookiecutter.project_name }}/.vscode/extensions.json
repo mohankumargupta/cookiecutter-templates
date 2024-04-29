@@ -1,0 +1,11 @@
+{
+    "recommendations": [
+        "discretegames.f5anything",
+        "Wokwi.wokwi-vscode"
+    ],
+    "unwantedRecommendations": [
+        "ms-vscode.cpptools-extension-pack",
+        "ms-vscode-remote.remote-wsl",
+        "ms-azuretools.vscode-docker"
+    ]
+}
