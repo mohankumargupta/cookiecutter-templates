@@ -1,2 +1,2 @@
-{% set esphome = cookiecutter.project_name +  "/" + cookiecutter.example_template "/esphome.yaml" %}
+{% set esphome = cookiecutter.project_name +  "/" + cookiecutter.example_template + "/esphome.yaml" %}
 {% include esphome %}
