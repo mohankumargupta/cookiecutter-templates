@@ -1,0 +1,30 @@
+esphome:
+  name: {{ cookiecutter.project_name }}
+  on_boot:
+    then:
+      - output.turn_on: light_output
+esp32:
+  # esp32: https://esphome.io/components/esp32.html
+  # esp8266: https://esphome.io/components/esp8266.html
+  # find boards here:  https://github.com/platformio/platformio-docs/tree/develop/boards
+  # wokwi boards here: https://github.com/wokwi/wokwi-boards/tree/main/boards
+  board: lolin_s2_mini
+wifi:
+  ssid: "Wokwi-GUEST"
+web_server:
+  port: 80
+debug:
+  update_interval: 5s
+logger:
+  level: debug
+output:
+  - id: light_output
+    platform: gpio
+    pin: GPIO15
+switch:
+  - platform: template
+    name: "Template Switch"
+    optimistic: true
+
+
+

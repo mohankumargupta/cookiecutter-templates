@@ -3,3 +3,8 @@ version = 1
 #gdbServerPort = 3333
 elf = ".esphome/build/{{ cookiecutter.project_name }}/.pioenvs/{{ cookiecutter.project_name }}/firmware.elf"
 firmware = ".esphome/build/{{ cookiecutter.project_name }}/.pioenvs/{{ cookiecutter.project_name }}/firmware.bin"
+{% if cookiecutter.example_template == "webserver" %}
+[[net.forward]]
+from = "localhost:80"
+to = "10.13.37.2:80"
+{% endif %}

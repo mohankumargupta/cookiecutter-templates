@@ -8,6 +8,7 @@
     ],
     "example_template": [
         "blink",
-        "ili9341"
+        "ili9341",
+        "webserver"
     ]
 }
