@@ -1,0 +1,64 @@
+{
+    "version": 1,
+    "author": "Uri Shaked",
+    "editor": "wokwi",
+    "parts": [
+        {
+            "type": "board-wemos-s2-mini",
+            "id": "esp",
+            "top": -0.6,
+            "left": 231.66,
+            "rotate": 90,
+            "attrs": {
+                "psramSize": "2"
+            }
+        },
+        {
+            "type": "wokwi-resistor",
+            "id": "r1",
+            "top": 128.75,
+            "left": 172.8,
+            "attrs": {
+                "value": "1000"
+            }
+        },
+        {
+            "type": "wokwi-led",
+            "id": "led1",
+            "top": 25.2,
+            "left": 147.8,
+            "attrs": {
+                "color": "blue"
+            }
+        }
+    ],
+    "connections": [
+        [
+            "esp:15",
+            "r1:2",
+            "green",
+            [
+                "v38.25",
+                "h-18"
+            ]
+        ],
+        [
+            "esp:GND.2",
+            "led1:C",
+            "black",
+            [
+                "v47.85",
+                "h-96.4"
+            ]
+        ],
+        [
+            "led1:A",
+            "r1:1",
+            "green",
+            [
+                "v0"
+            ]
+        ]
+    ],
+    "dependencies": {}
+}
