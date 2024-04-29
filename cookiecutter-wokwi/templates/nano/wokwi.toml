@@ -1,0 +1,5 @@
+[wokwi]
+version = 1
+#gdbServerPort = 3333
+elf = "build/nano.ino.elf"
+firmware = "build/nano.ino.hex"
