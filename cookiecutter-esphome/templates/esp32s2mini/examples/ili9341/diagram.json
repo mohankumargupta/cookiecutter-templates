@@ -1,0 +1,92 @@
+{
+    "version": 1,
+    "author": "Uri Shaked",
+    "editor": "wokwi",
+    "parts": [
+        {
+            "type": "board-wemos-s2-mini",
+            "id": "esp",
+            "top": 220.2,
+            "left": 394.86,
+            "rotate": 90,
+            "attrs": {
+                "psramSize": "2"
+            }
+        },
+        {
+            "type": "wokwi-ili9341",
+            "id": "lcd1",
+            "top": -124,
+            "left": 249.3,
+            "attrs": {}
+        }
+    ],
+    "connections": [
+        [
+            "esp:GND.1",
+            "lcd1:GND",
+            "black",
+            [
+                "v-19.35",
+                "h-115.2"
+            ]
+        ],
+        [
+            "esp:GND.2",
+            "lcd1:CS",
+            "black",
+            [
+                "h0",
+                "v28.65",
+                "h-105.6"
+            ]
+        ],
+        [
+            "lcd1:VCC",
+            "esp:3V3",
+            "red",
+            [
+                "v19.2"
+            ]
+        ],
+        [
+            "esp:3",
+            "lcd1:RST",
+            "cyan",
+            [
+                "h0",
+                "v-57.6",
+                "h-144"
+            ]
+        ],
+        [
+            "esp:4",
+            "lcd1:D/C",
+            "green",
+            [
+                "v9.6",
+                "h-124.8"
+            ]
+        ],
+        [
+            "lcd1:SCK",
+            "esp:7(SCK)",
+            "yellow",
+            [
+                "v38.4",
+                "h86.39"
+            ]
+        ],
+        [
+            "esp:11(MOSI)",
+            "lcd1:MOSI",
+            "#8f4814",
+            [
+                "v-19.2",
+                "h-86.4",
+                "v-9.6"
+            ]
+        ]
+    ],
+    "dependencies": {}
+}

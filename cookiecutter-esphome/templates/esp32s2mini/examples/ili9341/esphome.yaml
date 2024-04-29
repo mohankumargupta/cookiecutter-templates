@@ -1,0 +1,40 @@
+esphome:
+  name: esp32s2mini
+esp32:
+  # esp32: https://esphome.io/components/esp32.html
+  # esp8266: https://esphome.io/components/esp8266.html
+  # find boards here:  https://github.com/platformio/platformio-docs/tree/develop/boards
+  # wokwi boards here: https://github.com/wokwi/wokwi-boards/tree/main/boards
+  board: lolin_s2_mini
+debug:
+  update_interval: 5s
+logger:
+  level: debug
+spi:
+  clk_pin: 7
+  mosi_pin: 11
+font:
+  - file: "gfonts://Roboto"
+    id: roboto
+    size: 50
+color:
+  - id: red
+    red: 100%
+display:
+  - platform: ili9xxx
+    model: ili9341
+    dc_pin: 4
+    reset_pin: 3
+    update_interval: 1min
+    lambda: |-
+      int screen_width = it.get_width();
+      int screen_height = it.get_height();
+      int x, y, width, height;
+      it.get_text_bounds(0, 0, "Hi S2 mini!", id(roboto), TextAlign::TOP_LEFT, &x, &y, &width, &height);
+      int center_x = screen_height / 2 - height / 2 ;
+      ESP_LOGI("mohan", "screen width: %d height: %d", screen_width, screen_height);
+      ESP_LOGI("mohan", "text bounding box width: %d height: %d", width, height);
+      ESP_LOGI("mohan", "to draw center vertically, draw at x=0 y=%d", center_x);
+
+      it.fill(Color::BLACK);
+      it.print(0, center_x, id(roboto), id(red), TextAlign::TOP_LEFT, "Hi S2 mini!");
