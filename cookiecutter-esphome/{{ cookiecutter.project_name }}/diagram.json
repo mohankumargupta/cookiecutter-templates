@@ -1,2 +1,2 @@
-{% set diagram = cookiecutter.project_name +  "/" + cookiecutter.template +"/diagram.json" %}
+{% set diagram = cookiecutter.project_name +  "/" + cookiecutter.example_template +"/diagram.json" %}
 {% include diagram %}

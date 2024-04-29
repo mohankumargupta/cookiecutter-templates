@@ -6,7 +6,7 @@
         "esp32s3",
         "esp32c3supermini"
     ],
-    "template": [
+    "example_template": [
         "blink",
         "ili9341"
     ]
