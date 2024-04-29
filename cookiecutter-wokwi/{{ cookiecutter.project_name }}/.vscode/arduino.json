@@ -1,11 +1,2 @@
-{%- if cookiecutter.arduino == "esp32s2" %}
-{%- include "esp32s2/arduino.json" %}
-{%- elif cookiecutter.arduino == "esp32" %}
-{%- include "esp32/arduino.json" %}
-{%- elif cookiecutter.arduino == "esp32c3supermini" %}
-{%- include "esp32c3/arduino.json" %}
-{%- elif cookiecutter.arduino == "esp32s3" %}
-{%- include "esp32s3/arduino.json" %}
-{%- elif cookiecutter.arduino == "nano" %}
-{%- include "nano/arduino.json" %}
-{% endif %}
+{% set arduino = cookiecutter.project_name + "/arduino.json" %}
+{% include arduino %}
