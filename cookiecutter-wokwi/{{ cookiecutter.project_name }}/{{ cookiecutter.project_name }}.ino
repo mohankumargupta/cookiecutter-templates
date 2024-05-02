@@ -1,2 +1,2 @@
-{% set sketch = cookiecutter.project_name + "/sketch.ino" %}
+{% set sketch = cookiecutter.arduino + "/sketch.ino" %}
 {% include sketch %}
