@@ -1,2 +1,2 @@
-{% set wokwi = cookiecutter.project_name + "/wokwi.toml" %}
+{% set wokwi = cookiecutter.arduino + "/wokwi.toml" %}
 {% include wokwi %}
