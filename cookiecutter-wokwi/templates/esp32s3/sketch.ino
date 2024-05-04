@@ -1,16 +1,15 @@
-void setup() {
-  pinMode(LED_BUILTIN, OUTPUT);
+#define LED 15
 
-  // Wait for USB Serial to become available
-  while (!Serial) delay(100);
+void setup() {
+  pinMode(LED, OUTPUT);
 
   Serial.begin(115200);
-  Serial.println("Hello, esp32 s3 devkit!");
+  Serial.println("Hello, Wokwi!");
 }
 
 void loop() {
-  digitalWrite(LED_BUILTIN, HIGH);
+  digitalWrite(LED, LOW);
   delay(1000);
-  digitalWrite(LED_BUILTIN, LOW);
+  digitalWrite(LED, HIGH);
   delay(1000);
 }
