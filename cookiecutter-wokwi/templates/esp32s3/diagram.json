@@ -6,8 +6,8 @@
         {
             "type": "board-esp32-s3-devkitc-1",
             "id": "esp",
-            "top": 9,
-            "left": 241.26,
+            "top": -3.13,
+            "left": 136.48,
             "rotate": 90,
             "attrs": {
                 "psramSize": "2"
@@ -16,8 +16,8 @@
         {
             "type": "wokwi-resistor",
             "id": "r1",
-            "top": 128.75,
-            "left": 172.8,
+            "top": 51.95,
+            "left": 220.8,
             "attrs": {
                 "value": "1000"
             }
@@ -25,8 +25,8 @@
         {
             "type": "wokwi-led",
             "id": "led1",
-            "top": 25.2,
-            "left": 147.8,
+            "top": -3.6,
+            "left": 378.2,
             "attrs": {
                 "color": "red"
             }
