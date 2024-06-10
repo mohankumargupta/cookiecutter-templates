@@ -5,7 +5,11 @@ build-backend = "nuitka.distutils.Build"
 [project]
 name = "{{ cookiecutter.project_name }}"
 version = "0.1"
-requires-python = "=={{ cookiecutter.python }}.*"
+{%-if cookiecutter.python_requirements == "exact" %}
+requires-python = "== {{ cookiecutter.python }}.*"
+{%- else %}
+requires-python = "~= {{ cookiecutter.python }}"
+{% endif %}
 dependencies = [
     "requests",
     "easygui"
