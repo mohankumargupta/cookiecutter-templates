@@ -9,7 +9,10 @@
             "type": "debugpy",
             "request": "launch",
             "module": "esphome",
-            "args": ["compile", "tests/component_tests/text_sensor/test_text_sensor.yaml"],
+            "args": ["compile", "--only-generate","mohan/example.yaml"],
+            "env": {
+                "ESPHOME_DATA_DIR": "mohan/build"
+            },
             "stopOnEntry": false
         }
     ]
