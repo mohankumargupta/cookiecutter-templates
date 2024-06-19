@@ -55,7 +55,7 @@ def clone_github_repo():
 
             #esphome_dir.joinpath("setup.cfg").unlink()
             #esphome_dir.joinpath("setup.py").unlink()
-            #esphome_dir.joinpath("pyproject.toml").unlink()            
+            esphome_dir.joinpath("pyproject.toml").unlink()            
     except Exception as e:
         print(f"Failed to clone repository: {e}")
         sys.exit(1)
