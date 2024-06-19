@@ -21,7 +21,7 @@ if "{{ cookiecutter.project_template }}" == "esphomedev":
     shutil.move(vscode_launch, vscode_dest)
     shutil.move(vscode_settings, vscode_dest)
     shutil.rmtree(vscode)
-    esphome_dir.joinpath("pytest.ini").unlink()
+    #esphome_dir.joinpath("pytest.ini").unlink()
     component_dir = esphome_dir / "esphome" / "components" / "{{ cookiecutter.project_name }}"
     #print("about to mkdir")
     #component_dir.mkdir()
