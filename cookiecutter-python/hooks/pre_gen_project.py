@@ -51,7 +51,7 @@ def clone_github_repo():
 
             print("Repository cloned successfully!")
             Path("temp.zip").unlink()
-            #esphome_dir = Path("esphome-dev")
+            esphome_dir = Path("esphome-dev")
 
             #esphome_dir.joinpath("setup.cfg").unlink()
             #esphome_dir.joinpath("setup.py").unlink()
