@@ -22,13 +22,15 @@ if "{{ cookiecutter.project_template }}" == "esphomedev":
     shutil.move(vscode_settings, vscode_dest)
     shutil.rmtree(vscode)
     #esphome_dir.joinpath("pytest.ini").unlink()
-    component_dir = esphome_dir / "esphome" / "components" / "{{ cookiecutter.project_name }}"
+    #component_dir = esphome_dir / "esphome" / "components" / "{{ cookiecutter.project_name }}"
+    component_dir = esphome_dir / "mohan" / "components" / "{{ cookiecutter.project_name }}"
     #print("about to mkdir")
-    #component_dir.mkdir()
+    component_dir.mkdir()
     #print("about to copy")
-    shutil.copytree(src=Path("_extra_files").joinpath("esphomedev"), dst=component_dir)
+    shutil.copytree(src=Path("_extra_files").joinpath("esphomedev"), dst=component_dir, dirs_exist_ok=True)
     test_dir = esphome_dir / "tests" / "component_tests" / "{{ cookiecutter.project_name }}"
-    shutil.copytree(src=Path("_extra_files").joinpath("esphomedevtest"), dst=test_dir)
+    mohan = esphome_dir / "mohan"
+    shutil.copytree(src=Path("_extra_files").joinpath("esphomedevtest"), dst=mohan)
 
 shutil.rmtree("_extra_files")
     
