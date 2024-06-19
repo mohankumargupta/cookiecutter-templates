@@ -30,7 +30,7 @@ if "{{ cookiecutter.project_template }}" == "esphomedev":
     shutil.copytree(src=Path("_extra_files").joinpath("esphomedev"), dst=component_dir, dirs_exist_ok=True)
     test_dir = esphome_dir / "tests" / "component_tests" / "{{ cookiecutter.project_name }}"
     mohan = esphome_dir / "mohan"
-    #shutil.copytree(src=Path("_extra_files").joinpath("esphomedevtest"), dst=mohan)
+    shutil.copytree(src=Path("_extra_files").joinpath("esphomedevtest"), dst=mohan, dirs_exist_ok=True)
 
 shutil.rmtree("_extra_files")
     

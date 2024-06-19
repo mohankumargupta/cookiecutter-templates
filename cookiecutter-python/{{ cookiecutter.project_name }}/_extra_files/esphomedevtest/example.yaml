@@ -2,5 +2,3 @@ esphome:
   name: {{ cookiecutter.project_name }}
 esp32:
   board: esp32doit-devkit-v1
-{{ cookiecutter.project_name }}:
-  id: example1
