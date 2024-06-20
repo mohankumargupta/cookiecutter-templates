@@ -9,7 +9,7 @@ void {{ cookiecutter.project_name[0]|upper }}{{ cookiecutter.project_name[1:] }}
 
 }
 
-void EmptyComp{{ cookiecutter.project_name[0]|upper }}{{ cookiecutter.project_name[1:] }}Componentonent::loop() {
+void {{ cookiecutter.project_name[0]|upper }}{{ cookiecutter.project_name[1:] }}Component::loop() {
 
 }
 
