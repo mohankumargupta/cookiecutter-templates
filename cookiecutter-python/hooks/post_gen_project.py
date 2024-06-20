@@ -15,11 +15,13 @@ if "{{ cookiecutter.project_template }}" == "esphomedev":
     vscode = Path(".vscode")
     vscode_launch = vscode.joinpath("launch.json")
     vscode_settings = vscode.joinpath("settings.json")
+    vscode_extensions = vscode.joinpath("extensions.json")
     vscode_dest = esphome_dir.joinpath(".vscode")
     Path("main.py").unlink()
     shutil.move("pyproject.toml", esphome_dir)
     shutil.move(vscode_launch, vscode_dest)
     shutil.move(vscode_settings, vscode_dest)
+    shutil.move(vscode_extensions, vscode_dest)
     shutil.rmtree(vscode)
     #esphome_dir.joinpath("pytest.ini").unlink()
     #component_dir = esphome_dir / "esphome" / "components" / "{{ cookiecutter.project_name }}"
