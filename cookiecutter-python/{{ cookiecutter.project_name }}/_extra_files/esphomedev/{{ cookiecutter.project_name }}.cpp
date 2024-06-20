@@ -14,7 +14,7 @@ void EmptyComp{{ cookiecutter.project_name[0]|upper }}{{ cookiecutter.project_na
 }
 
 void {{ cookiecutter.project_name[0]|upper }}{{ cookiecutter.project_name[1:] }}Component::dump_config(){
-    ESP_LOGCONFIG(TAG, "Empty component");
+    ESP_LOGI(TAG, "Empty component");
 }
 
 

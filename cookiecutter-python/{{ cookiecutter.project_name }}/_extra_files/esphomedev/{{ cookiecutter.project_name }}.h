@@ -1,6 +1,7 @@
 #pragma once
 
-#include "esphome.h"
+#include "esphome/core/component.h"
+#include "esphome/core/log.h"
 
 namespace esphome {
 namespace {{ cookiecutter.project_name }} {
