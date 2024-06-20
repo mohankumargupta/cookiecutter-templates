@@ -3,7 +3,7 @@ import esphome.config_validation as cv
 from esphome.const import CONF_ID
 
 empty_component_ns = cg.esphome_ns.namespace('{{ cookiecutter.project_name }}')
-{{ cookiecutter.project_name[0]|upper }}{{ cookiecutter.project_name[1:] }}Component = empty_component_ns.class_("{{ cookiecutter.project_name[0]|upper }}{{ cookiecutter.project_name[1:] }}", cg.Component)
+{{ cookiecutter.project_name[0]|upper }}{{ cookiecutter.project_name[1:] }}Component = empty_component_ns.class_("{{ cookiecutter.project_name[0]|upper }}{{ cookiecutter.project_name[1:] }}Component", cg.Component)
 
 CONFIG_SCHEMA = cv.Schema({
     cv.GenerateID(): cv.declare_id({{ cookiecutter.project_name[0]|upper }}{{ cookiecutter.project_name[1:] }}Component)
