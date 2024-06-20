@@ -2,3 +2,9 @@ esphome:
   name: {{ cookiecutter.project_name }}
 esp32:
   board: esp32doit-devkit-v1
+external_components:
+  - source:
+      type: local
+      path: components      
+logger:
+{{ cookiecutter.project_name }}:
