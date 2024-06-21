@@ -35,10 +35,23 @@
             "stopOnEntry": false
         }, 
         {
-            "name": "test f5",
-            "type": "f5anything",
+            
+            "name": "Wokwi GDB",
+            "type": "cppdbg",
             "request": "launch",
-            "command": "echo hi"
+            "program": "${workspaceFolder}/mohan/build/build/oled/.pioenvs/oled/firmware.elf",
+            "cwd": "${workspaceFolder}",
+            "MIMode": "gdb",
+            "miDebuggerPath": "${env:UserProfile}/.platformio/packages/toolchain-riscv32-esp/bin/riscv32-esp-elf-gdb.exe",
+            "miDebuggerServerAddress": "localhost:3333",
+            "stopAtEntry": true,
+           "logging": {
+                "engineLogging": true,
+                "trace": true,
+                "traceResponse": true
+             }, 
+             "preLaunchTask": "Start Wokwi with Debugger"
+              
         }              
     ]
 }

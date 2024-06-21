@@ -1,5 +1,10 @@
 {
     "version": "2.0.0",
+    "options": {
+      "env": {
+        "ESPHOME_DATA_DIR": "mohan/build",
+      }
+    },
     "tasks": [
       {
         "label": "Build",
@@ -16,6 +21,11 @@
           "kind": "build",
           "isDefault": true
         }
-      }]
+      },
+      {
+        "label": "Start Wokwi with Debugger",
+        "command": "${command:wokwi-vscode.startAndWait}"
+      }
+    ]
   }                  
       
